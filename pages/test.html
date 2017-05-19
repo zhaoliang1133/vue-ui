@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础例子</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <p>{{message}}</p>
+    <p>{{remessage}}</p>
+</div>
+
+<script>
+    var data={
+        message:"test2"
+    }
+    var getTest={
+        remessage:function () {
+            return this.message.split('').reverse().join('')
+        }
+    }
+    var app=new Vue({
+        el:'#app',
+        data:data,
+        computed:getTest
+    })
+</script>
+
+</body>
+</html>

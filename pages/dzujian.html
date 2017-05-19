@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件化应用构建</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <ol>
+        <todo-item v-for="item in list" v-bind :todo="item"></todo-item>
+    </ol>
+</div>
+
+<script>
+
+    Vue.component('todo-item',{
+        props:['todo'],
+        template: '<li>{{todo.text}}</li>'
+    })
+
+    var data={
+        list:[
+            {text:'aaa'},
+            {text:'bbb'},
+            {text:'ccc'}
+        ]
+    }
+
+    var app=new Vue({
+        el:'#app',
+        data:data
+    })
+</script>
+
+
+</body>
+</html>

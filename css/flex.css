@@ -1,0 +1,258 @@
+/* 车主认证css  Create by Richard*/
+
+/* 子元素-平均分栏 */
+.flex-1 {
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  /*width: 100%;               !* For old syntax, otherwise collapses. *!*/
+  -webkit-flex: 1;          /* Chrome */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.flex-2 {
+  -webkit-box-flex: 2;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 2;         /* OLD - Firefox 19- */
+  /*width: 20%;               !* For old syntax, otherwise collapses. *!*/
+  -webkit-flex: 2;          /* Chrome */
+  -ms-flex: 2;              /* IE 10 */
+  flex: 2;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex-3 {
+  -webkit-box-flex: 3;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 3;         /* OLD - Firefox 19- */
+  /*width: 20%;               !* For old syntax, otherwise collapses. *!*/
+  -webkit-flex: 3;          /* Chrome */
+  -ms-flex: 3;              /* IE 10 */
+  flex: 3;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex-4 {
+  -webkit-box-flex: 4;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 4;         /* OLD - Firefox 19- */
+  /*width: 20%;               !* For old syntax, otherwise collapses. *!*/
+  -webkit-flex: 4;          /* Chrome */
+  -ms-flex: 4;              /* IE 10 */
+  flex: 4;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex-5 {
+  -webkit-box-flex: 5;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 5;         /* OLD - Firefox 19- */
+  /*width: 20%;               !* For old syntax, otherwise collapses. *!*/
+  -webkit-flex: 5;          /* Chrome */
+  -ms-flex: 5;              /* IE 10 */
+  flex: 5;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.flex-6 {
+  -webkit-box-flex: 6;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 6;         /* OLD - Firefox 19- */
+  /*width: 20%;               !* For old syntax, otherwise collapses. *!*/
+  -webkit-flex: 6;          /* Chrome */
+  -ms-flex: 6;              /* IE 10 */
+  flex: 6;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+
+
+/* 父元素-横向排列（主轴） */
+.flex-h {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+/* 父元素-横向换行 */
+.flex-h-warp {
+  /* 09版 */
+  /*-webkit-box-lines: multiple;*/
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -webkit-box-lines: multiple;
+  box-lines: multiple; /*single    multiple*/
+}
+
+/* 父元素-水平居中（主轴是横向才生效） */
+.flex-h-center {
+  /* 09版 */
+  -webkit-box-pack: center;
+  /* 12版 */
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+
+  -webkit-flex-pack: center;
+  flex-pack: center; /*start    center    end    justify    distribute*/
+  /* 其它取值如下：
+      align-items     主轴原点方向对齐
+      flex-end        主轴延伸方向对齐
+      space-between   等间距排列，首尾不留白
+      space-around    等间距排列，首尾留白
+   */
+}
+/* 父元素-分布开（主轴是横向才生效） */
+.flex-space-around-h {
+  /* 09版 */
+  -webkit-box-pack: justify; /*start    center    end    justify*/
+  /* 12版 */
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+
+  -webkit-flex-pack: distribute;
+  flex-pack: distribute; /*start    center    end    justify    distribute*/
+  /* 其它取值如下：
+      flex-start    |  主轴原点方向对齐
+      flex-end        主轴延伸方向对齐
+      space-between   等间距排列，首尾不留白
+      space-around    等间距排列，首尾留白
+   */
+}
+/* 父元素-纵向排列（主轴） */
+.flex-v {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: vertical;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+/* 父元素-纵向换行 */
+.flex-v-warp {
+  /* 09版 */
+  /*-webkit-box-lines: multiple;*/
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* 父元素-竖直居中（主轴是横向才生效） */
+.flex-v-center {
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  /*其他值如下
+      flex-start 交叉轴的起点对齐
+      flex-end 交叉轴的终点对齐
+      center 交叉轴的中点对齐
+      baseline 项目的第一行文字的基线对齐
+      stretch （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+  */
+}
+
+.flex-v-end {
+  /* 09版 */
+  -webkit-box-align: end;
+  /* 12版 */
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  /*其他值如下
+      flex-start 交叉轴的起点对齐
+      flex-end 交叉轴的终点对齐
+      center 交叉轴的中点对齐
+      baseline 项目的第一行文字的基线对齐
+      stretch （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+  */
+}
+
+
+/*.flex-item-v-end {
+  !* 09版 *!
+  -webkit-box-align: end;
+  !* 12版 *!
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -ms-align-self: flex-end;
+  -o-align-self: flex-end;
+  align-self: flex-end;
+  !*其他值如下
+      flex-start 交叉轴的起点对齐
+      flex-end 交叉轴的终点对齐
+      center 交叉轴的中点对齐
+      baseline 项目的第一行文字的基线对齐
+      stretch （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+  *!
+}*/
+
+
+/*多行垂直居中*/
+/*这个只有伸缩项目有多行时才生效，这种情况只有伸缩容器设置了flex-wrap为wrap时，并且没有足够的空间把伸缩项目放在同一行中。这个将对每一行起作用而不是每一个伸缩项目*/
+.flex-dvc{
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-align-content: center;
+  -o-align-content: center;
+  align-content: center;
+  /*其他值如：flex-start ｜ flex-end ｜ space-between ｜ space-around ｜ stretch*/
+
+  -webkit-flex-line-pack: center;
+  flex-line-pack: center;
+  /*其他值如：start ｜ end ｜ justify｜ distribute｜ stretch*/
+}
+/*多行垂值平均分布*/
+.flex-dvd{
+  -webkit-align-content: space-around;
+  -moz-align-content: space-around;
+  -ms-align-content: space-around;
+  -o-align-content: space-around;
+  align-content: space-around;
+  /*其他值如：flex-start ｜ flex-end ｜ space-between ｜ space-around ｜ stretch*/
+
+  -webkit-flex-line-pack: distribute;
+  flex-line-pack: distribute;
+  /*其他值如：start ｜ end ｜ justify ｜ distribute ｜ stretch*/
+}
+/* 子元素-显示在从左向右（从上向下）第1个位置，用于改变源文档顺序显示 */
+.flex-order-1 {
+  -webkit-box-ordinal-group: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 1;      /* OLD - Firefox 19- */
+  -ms-flex-order: 1;              /* TWEENER - IE 10 */
+  -webkit-order: 1;               /* NEW - Chrome */
+  order: 1;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+/* 子元素-显示在从左向右（从上向下）第2个位置，用于改变源文档顺序显示 */
+.flex-order-2 {
+  -webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+  -ms-flex-order: 2;              /* TWEENER - IE 10 */
+  -webkit-order: 2;               /* NEW - Chrome */
+  order: 2;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}

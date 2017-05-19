@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>声明式渲染</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<!-- 1.start  声明式渲染-->
+<!--Vue.js 的核心是一个允许采用简洁的模板语法来声明式的将数据渲染进 DOM-->
+<!--<div id="app">
+    {{message}}
+</div>
+
+<script>
+    var data={
+        message:"test-one"
+     }
+   var app = new Vue({
+       el:'#app',
+       data:data
+   })
+</script>-->
+<!--除了文本插值，我们还可以采用这样的方式绑定 DOM 元素属性 -->
+<div id="app">
+    <span v-bind :title="message">
+        鼠标悬停几秒钟查看提示信息！
+    </span>
+    <input v-bind :placeholder="text" :value="aaaa">
+</div>
+<script>
+    var data ={
+        message:'test',
+        text:'请输入',
+        aaaa:'abcd'
+    }
+    var app=new Vue({
+        el:"#app",
+        data:data
+    })
+</script>
+<!-- 1.end  声明式渲染-->
+
+
+</body>
+</html>
