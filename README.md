@@ -314,4 +314,69 @@ methods: {
 }
 ```
 > 我们可以将同一函数定义为一个 method 而不是一个计算属性。对于最终的结果，两种方式确实是相同的。然而，不同的是计算属性是基于它们的依赖进行缓存的。计算属性只有在它的相关依赖发生改变时才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。
+### class与style绑定
+- 对象语法
+```
+  <style>
+        .active{
+            color: aqua;
+        }
+    </style>
 
+<div id="app">
+    <div :class = "classObject">{{message}}</div>
+</div>
+
+<script>
+    var data={
+        message:'aaaa',
+        classObject:{
+            active:true,
+            'text-danger':false
+        }
+    }
+    var app=new Vue({
+        el:'#app',
+        data:data
+    })
+</script>
+
+```
+- 绑定内联样式
+```
+<div id="app">
+    <div :style = "classObject">{{message}}</div>
+</div>
+
+<script>
+    var data={
+        message:'eeee',
+        classObject:{
+            color:'aqua',
+            'text-danger':false
+        }
+    }
+    var app=new Vue({
+        el:'#app',
+        data:data
+    })
+</script>
+```
+### 时间处理器
+```
+<div id="example-1">
+    <button @click="counter += 1">+1</button>
+    <p>{{counter}}</p>
+</div>
+
+<script>
+    var data={
+        counter:0
+    }
+    var app=new Vue({
+        el:'#example-1',
+        data:data
+    })
+</script>
+
+```

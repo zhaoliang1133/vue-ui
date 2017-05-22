@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间处理器</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="example-1">
+    <button @click="counter += 1">+1</button>
+    <p>{{counter}}</p>
+</div>
+
+<script>
+    var data={
+        counter:0
+    }
+    var app=new Vue({
+        el:'#example-1',
+        data:data
+    })
+</script>
+
+</body>
+</html>
